@@ -20,7 +20,11 @@ const App = () => {
       <ul>
         {data.map((user: User) => {
           console.log("User:", user);
-          return <li key={user.id}>{user.firstname}</li>;
+          return (
+            <li key={user.id}>
+              {user.firstname} {user.lastname}
+            </li>
+          );
         })}
       </ul>
     </>
